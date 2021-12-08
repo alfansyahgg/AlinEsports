@@ -1,0 +1,229 @@
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  min-height: 10vh;
+  font-family: "Teko", sans-serif;
+  font-weight: 400;
+  /* padding-top: 50px; */
+  justify-content: space-around;
+  position: fixed;
+  z-index: 10;
+  /* top: 20px; */
+  padding: 15px 0;
+  background: linear-gradient(to right, #8e0e00, #1f1c18);
+}
+
+.navbar .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 35%;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  color: white;
+}
+
+.navbar .logo p {
+  white-space: nowrap;
+  margin-left: 15px;
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+
+.navbar .logo img {
+  height: 40px;
+}
+
+.navbar .nav-links {
+  width: 30%;
+}
+
+.navbar .nav-links i {
+  display: none;
+}
+
+.navbar .nav-links .nav-menus {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  font-weight: 400;
+}
+
+.navbar .nav-links .nav-menus li {
+  font-size: 1.1rem;
+  list-style: none;
+
+  line-height: 1.5em;
+  height: auto;
+}
+
+.navbar .nav-links .nav-menus a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.burger {
+  width: 5%;
+  position: relative;
+  left: 30px;
+  cursor: pointer;
+  display: none;
+}
+
+.burger div {
+  width: 20px;
+  height: 2px;
+  background-color: white;
+  margin: 5px;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+@-webkit-keyframes navLinkFade {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(50px);
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(50px);
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+}
+
+.times .line1 {
+  -webkit-transform: rotate(-45deg) translate(-5px, 5px);
+  transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+.times .line2 {
+  opacity: 0;
+}
+
+.times .line3 {
+  -webkit-transform: rotate(45deg) translate(-5px, -5px);
+  transform: rotate(45deg) translate(-5px, -5px);
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-links {
+    width: 50% !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    overflow-x: hidden !important;
+  }
+  .nav-links {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 999;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background-color: #00081b;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    width: 50% !important;
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    -webkit-transition: -webkit-transform 0.4s ease-in;
+    transition: -webkit-transform 0.4s ease-in;
+    transition: transform 0.4s ease-in;
+    transition: transform 0.4s ease-in, -webkit-transform 0.4s ease-in;
+    -webkit-box-pack: start !important;
+    -ms-flex-pack: start !important;
+    justify-content: start !important;
+    padding: 30px;
+  }
+  .nav-links .nav-menus {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    height: 80%;
+    -webkit-box-pack: start !important;
+    -ms-flex-pack: start !important;
+    justify-content: flex-start !important;
+    margin-top: 30px;
+  }
+  .nav-links li {
+    opacity: 0;
+    margin-top: 10px;
+    border-bottom: 1px solid #101c38;
+  }
+  .nav-links i {
+    display: block !important;
+    color: white;
+    cursor: pointer;
+  }
+  .burger {
+    display: block;
+  }
+  .nav-active {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+}
+
+.offcanvas-overly {
+  position: fixed;
+  background: #000;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 9;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.offcanvas-overly.active {
+  opacity: 0.5;
+  visibility: visible;
+}
+/*# sourceMappingURL=style.css.map */
