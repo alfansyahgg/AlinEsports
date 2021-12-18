@@ -1,8 +1,4 @@
 import React, { useEffect } from "react";
-
-import SosmedSponsors from "./SosmedSponsors";
-
-// import ScrollAnimation from "react-animate-on-scroll";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
@@ -21,8 +17,8 @@ const Sponsors = () => {
               className="w-full md:h-28 md:px-4 "
               src="images/sponsors/adhi-1.webp"
               effect="blur"
+              delayTime={1000}
             />
-            <SosmedSponsors />
           </div>
 
           <div className="flex flex-col justify-center items-center md:w-2/5">
@@ -30,8 +26,8 @@ const Sponsors = () => {
               className="w-full md:h-28 md:px-4 "
               src="images/sponsors/BG.webp"
               effect="blur"
+              delayTime={1000}
             />
-            <SosmedSponsors />
           </div>
 
           <div className="flex flex-col justify-center items-center md:w-2/5">
@@ -39,8 +35,8 @@ const Sponsors = () => {
               className="w-full md:h-28 md:px-4 "
               src="images/sponsors/RKApparel2.png"
               effect="blur"
+              delayTime={1000}
             />
-            <SosmedSponsors />
           </div>
         </div>
       </div>

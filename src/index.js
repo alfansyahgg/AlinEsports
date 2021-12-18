@@ -11,6 +11,7 @@ import {
 
 import About from './components/About/About'
 import Contact from './components/Contact/Contact'
+import Community from './components/community/Community'
 
 ReactDOM.render(
   <React.StrictMode>
@@ -19,6 +20,7 @@ ReactDOM.render(
       <Route path="/" element={<App />}></Route>      
       <Route path="/about" element={<About />}></Route>
       <Route path="/contact" element={<Contact />}></Route>
+      <Route path="/community" element={<Community />}></Route>
     </Routes>
   </BrowserRouter>,
   </React.StrictMode>,

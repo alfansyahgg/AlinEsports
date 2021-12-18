@@ -1,15 +1,9 @@
-/* CSS */
 import "../css/transnavbar.css";
-
-/* JS */
-// import "../js/navbir";
-
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import logo from "../images/logo-alin.png";
-import { useEffect } from "react/cjs/react.development";
 import { Link } from "react-router-dom";
 
-const TransNavbar = () => {
+const TransNavbar = ({ isCommunity }) => {
   const [openNav, setOpenNav] = useState(false);
   const [isOverLay, setisOverLay] = useState(false);
 
@@ -80,6 +74,13 @@ const TransNavbar = () => {
             <li>
               <Link to="/shop">Shop</Link>
             </li>
+            {
+              isCommunity == null && 
+              <li className="animate-pulse"  >
+                <Link to="/community">Join Community</Link>
+              </li>
+            }
+            
           </div>
         </ul>
 

@@ -1,6 +1,4 @@
 import React from "react";
-import TransNavbar from "../TransNavbar";
-
 import { Link } from "react-router-dom";
 import Navbar from "../TransNavbar";
 
